@@ -1,6 +1,36 @@
-# Heredity
 
-This project simulates the probability of gene and trait inheritance in a family, based on genetic information and known traits. It uses Bayesian inference to compute the likelihood that each person has a certain number of copies of a gene and whether they exhibit a particular trait.
+#🧬 Heredity – Inference with Probabilistic Models
+
+This project uses a probabilistic model to infer the likelihood that each person in a family has a particular genetic trait (e.g., hearing impairment caused by mutations in the GJB2 gene), based on data about their parents and observed traits.
+
+Using a Bayesian Network, the program:
+
+    Computes the joint probability of various gene/trait combinations in the family.
+
+    Aggregates these probabilities into final probability distributions for each individual.
+
+    Normalizes these distributions to provide meaningful, interpretable results.
+
+The model takes into account:
+
+    Inheritance rules of dominant/recessive genes.
+
+    Gene mutation probabilities.
+
+    The observed presence or absence of a trait.
+
+How It Works
+
+The algorithm performs exhaustive enumeration over all possible gene/trait configurations. For each configuration, it:
+
+    Calculates the joint probability of that scenario.
+
+    Updates a running total of probabilities for each person.
+
+    Normalizes the results so each distribution sums to 1.
+
+This results in a complete probabilistic inference about each person’s gene copies and whether they exhibit the trait.
+
 
 ## How It Works
 
